@@ -94,6 +94,7 @@ public class Stepdefs {
 
     @When("User click on OPEN NEW ACCOUNT button")
     public void user_click_on_open_new_account_button() throws InterruptedException {
+        //thread added
         Thread.sleep(5000);
         driver.findElement(By.xpath("//input[@type='submit' and @value='Open New Account']")).click();
     }
