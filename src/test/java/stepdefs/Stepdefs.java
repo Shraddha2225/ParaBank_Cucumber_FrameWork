@@ -22,6 +22,7 @@ public class Stepdefs {
     String url = "https://parabank.parasoft.com/parabank/index.htm";
     String userName = "john";
     String password = "demo";
+    String enterAmount = "3600";
     Scenario scenario;
 
     @Before
@@ -78,7 +79,6 @@ public class Stepdefs {
     @Given("User is able to click on link name as {string}")
     public void user_is_able_to_click_on_link_name_as(String linkName) {
         driver.findElement(By.linkText(linkName)).click();
-
     }
 
     @When("User select Account Type as {string} and any account number")
@@ -100,7 +100,7 @@ public class Stepdefs {
 
     @Then("Message is displayed Congratulations, your account is now open.")
     public void message_is_displayed_congratulations_your_account_is_now_open() {
-        WebElement element =driver.findElement(By.xpath("//h1[text()='Account Opened!']"));
+        WebElement element = driver.findElement(By.xpath("//h1[text()='Account Opened!']"));
         Assert.assertEquals(element.isDisplayed(),true,"Account open successfully");
     }
 
@@ -112,5 +112,36 @@ public class Stepdefs {
         scenario.log("New Account Number Generated As:" + accountNumber);
     }
 
+
+    //TC3: Transfer funds from one account to another account
+    @When("User enter amount {string} to transfer")
+    public void user_enter_amount_to_transfer(String enterAmount) throws InterruptedException {
+        Thread.sleep(5000);
+        driver.findElement(By.id("amount")).sendKeys(enterAmount);
+    }
+
+    @When("User select any account number and want to transfer funds to any another account")
+    public void user_select_any_account_number_and_want_to_transfer_funds_to_any_another_account(){
+        WebElement dropDownFirstAccountNumber = driver.findElement(By.id("fromAccountId"));
+        Select selectFirstAccountNumber = new Select(dropDownFirstAccountNumber);
+        selectFirstAccountNumber.selectByIndex(0);
+
+        WebElement dropDownSecondAccountNumber = driver.findElement(By.id("toAccountId"));
+        Select selectSecondAccountNumber = new Select(dropDownSecondAccountNumber);
+        selectSecondAccountNumber.selectByIndex(0);
+    }
+
+    @When("User click on TRANSFER")
+    public void user_click_on_transfer() {
+        driver.findElement(By.xpath("//input[@type='submit' and @value='Transfer']")).click();
+
+    }
+
+    @Then("Message is displayed amount is transfer from one account number to another account number")
+    public void message_is_displayed_amount_is_transfer_from_one_account_number_to_another_account_number(){
+        WebElement element = driver.findElement(By.xpath("//h1[text()='Transfer Complete!']"));
+        Assert.assertEquals(element.isDisplayed(),true,"Amount is transfer successfully ");
+
+    }
 
 }

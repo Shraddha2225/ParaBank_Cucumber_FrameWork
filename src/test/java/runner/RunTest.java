@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "classpath:features",
         glue = "stepdefs",
-        tags = "@open_new_account",
+        tags = "@transfer_funds",
         plugin = {"pretty",
                 "html:target/cucumber-reports.html"
         },
@@ -15,5 +15,4 @@ import io.cucumber.testng.CucumberOptions;
 
 )
 public class RunTest extends AbstractTestNGCucumberTests {
-
 }
