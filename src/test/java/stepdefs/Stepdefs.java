@@ -116,6 +116,7 @@ public class Stepdefs {
     //TC3: Transfer funds from one account to another account
     @When("User enter amount {string} to transfer")
     public void user_enter_amount_to_transfer(String enterAmount) throws InterruptedException {
+
         Thread.sleep(5000);
         driver.findElement(By.id("amount")).sendKeys(enterAmount);
     }
