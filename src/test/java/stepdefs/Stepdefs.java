@@ -64,7 +64,6 @@ public class Stepdefs {
         boolean actualTableDisplayed = driver.findElement(By.id("accountTable")).isDisplayed();
         Assert.assertEquals(true,actualTableDisplayed);
 
-
     }
 
 
@@ -144,4 +143,68 @@ public class Stepdefs {
 
     }
 
+
+    //TC4: Bill payment
+    @When("User enter payee name and address")
+    public void user_enter_payee_name_and_address() {
+        WebElement payeeName =driver.findElement(By.name("payee.name"));
+        payeeName.sendKeys("shraddha");
+
+        WebElement payeeAddress = driver.findElement(By.name("payee.address.street"));
+        payeeAddress.sendKeys("Sector 15,Carena Galaxy,Near DMart,Kharghar");
+
+    }
+
+    @When("User enter city and state")
+    public void user_enter_city_and_state() {
+        WebElement payeeCity = driver.findElement(By.name("payee.address.city"));
+        payeeCity.sendKeys("Navi Mumbai");
+
+        WebElement payeeState = driver.findElement(By.name("payee.address.state"));
+        payeeState.sendKeys("Maharashtra");
+    }
+
+    @When("User enter zipcode and phone number")
+    public void user_enter_zipcode_and_phone_number() {
+        WebElement payeeZipcode = driver.findElement(By.name("payee.address.zipCode"));
+        payeeZipcode.sendKeys("410210");
+
+        WebElement payeePhoneNumber = driver.findElement(By.name("payee.phoneNumber"));
+        payeePhoneNumber.sendKeys("7886453790");
+    }
+
+    @When("User enter account number and verify account number")
+    public void user_enter_account_number_and_verify_account_number() {
+        WebElement payeeAccountNumber = driver.findElement(By.name("payee.accountNumber"));
+        payeeAccountNumber.sendKeys("29876");
+
+        WebElement payeeVerifyAccountNumber = driver.findElement(By.name("verifyAccount"));
+        payeeVerifyAccountNumber.sendKeys("29876");
+
+    }
+
+    @When("User enter an amount")
+    public void user_enter_an_amount() {
+        WebElement enterAmount = driver.findElement(By.name("amount"));
+        enterAmount.sendKeys("4000");
+    }
+
+    @When("User select any account number from which he want to pay a bill")
+    public void user_select_any_account_number_from_which_he_want_to_pay_a_bill() {
+        WebElement dropDownFromAccountNo = driver.findElement(By.name("fromAccountId"));
+        Select selectFromAccountNo = new Select(dropDownFromAccountNo);
+        selectFromAccountNo.selectByIndex(0);
+    }
+
+    @When("User click on SEND PAYMENT")
+    public void user_click_on_send_payment() {
+        driver.findElement(By.xpath("//input[@type='submit' and @value='Send Payment']")).click();
+    }
+
+    @Then("Message is displayed bill payment was successful")
+    public void message_is_displayed_bill_payment_was_successful() throws InterruptedException {
+        WebElement displayBillComplete = driver.findElement(By.xpath("//h1[text()='Bill Payment Service']"));
+        Assert.assertEquals(displayBillComplete.isDisplayed(),true,"Bill Payment Is Completed Successfully");
+        Thread.sleep(5000);
+    }
 }
