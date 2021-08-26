@@ -1,18 +1,17 @@
 package stepdefs;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.sql.SQLOutput;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -27,13 +26,35 @@ public class Stepdefs {
 
     @Before
     public void setUp(Scenario scenario){
+
         this.scenario = scenario;
+        scenario.log("executed before each scenario");
     }
 
     @After
     public  void cleanUp(){
-        driver.quit();
+        if (!(driver==null)){
+            driver.quit();
+        }
+        scenario.log("executed after each scenario");
     }
+
+    @BeforeStep
+    public  void beforeEachStep(){
+        scenario.log("executed before each line of test case");
+    }
+
+    @AfterStep
+    public void afterEachStep(){
+        scenario.log("executed after each line of test case");
+        if(!(driver==null)){
+            TakesScreenshot screenshot =(TakesScreenshot)driver;
+            byte[] data = screenshot.getScreenshotAs(OutputType.BYTES);
+            scenario.attach(data,"image/png/jpeg","Failed step name" +scenario.getName());
+            //scenario.log("Test cases is passed,no screenshots captured");
+        }
+    }
+
 
 
     ////TC1: Login Feature
@@ -55,7 +76,14 @@ public class Stepdefs {
         driver.findElement(By.name("username")).sendKeys(userName);
         driver.findElement(By.name("password")).sendKeys(password);
         driver.findElement(By.xpath("//input[@value='Log In']")).click();
+    }
 
+    //User credentials implementation using key and value pair
+    @When("User Enter Username and Password as in the below table and click on login button")
+    public void user_enter_username_and_password_as_in_the_below_table_and_click_on_login_button(Map<String,String> userCred) {
+        driver.findElement(By.name("username")).sendKeys(userCred.get("Username"));
+        driver.findElement(By.name("password")).sendKeys(userCred.get("Password"));
+        driver.findElement(By.xpath("//input[@value='Log In']")).click();
     }
 
     @Then("user is able to login in the application")
@@ -207,4 +235,75 @@ public class Stepdefs {
         Assert.assertEquals(displayBillComplete.isDisplayed(),true,"Bill Payment Is Completed Successfully");
         Thread.sleep(5000);
     }
+
+
+    //Datatable temporary example
+    @Given("I want to do something")
+    public void i_want_to_do_something() {
+
+    }
+
+    @When("I have a argument to send as {string}")
+    public void i_have_a_argument_to_send_as(String args) {
+        System.out.println("Printing the Argument :" +args);
+    }
+
+    @When("I have a list of items to send")
+    public void i_have_a_list_of_items_to_send(List<String> list) {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+        // Double, Byte, Short, Long, BigInteger or BigDecimal.
+
+        System.out.println(list.toString());
+    }
+
+    //datatable entry using collection map key and value pair
+    @When("I have a Employees Name and their Employee Id")
+    public void i_have_a_employees_name_and_their_employee_id(Map<String,String> map) {
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+        // Double, Byte, Short, Long, BigInteger or BigDecimal.
+        //
+        // For other transformations you can register a DataTableType.
+        System.out.println("Printing An Employee Details : " +map);
+    }
+
+    @Then("Something should be happen")
+    public void something_should_be_happen() {
+
+    }
+
+    //Examples steps
+    @Given("I am on a search page")
+    public void i_am_on_a_search_page() {
+
+    }
+    @When("I want to search for a product as {string}")
+    public void i_want_to_search_for_a_product_as(String product) {
+        System.out.println("Printing searched product :" +product);
+    }
+    @Then("Result should be displayed related to {string}")
+    public void result_should_be_displayed_related_to(String success) {
+        System.out.println("Product search success :" +success);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
