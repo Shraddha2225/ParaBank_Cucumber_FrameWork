@@ -4,18 +4,22 @@ import io.cucumber.java.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.log4testng.Logger;
 
 import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-
+@Log4j2
 public class Stepdefs {
+    //private static final Logger log = (Logger) LogManager.getLogger(Stepdefs.class);
 
     WebDriver driver;
     String url = "https://parabank.parasoft.com/parabank/index.htm";
@@ -53,6 +57,7 @@ public class Stepdefs {
             scenario.attach(data,"image/png/jpeg","Failed step name" +scenario.getName());
             //scenario.log("Test cases is passed,no screenshots captured");
         }
+        log.debug("Each step hook is executed,screen shots taken");
     }
 
 
@@ -61,22 +66,29 @@ public class Stepdefs {
     @Given("User opened the browser")
     public void User_opened_the_browser(){
         driver = new ChromeDriver();
+        log.debug("chrome initialized");
         driver.manage().window().maximize(); // maximize browser window
+        log.debug("Browser maximized");
         driver.manage().deleteAllCookies(); // delete all cookies
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        log.debug("Each step hook is executed,screen shots taken");
     }
 
     @Given("User navigated to the application url")
     public void User_navigated_to_the_application_url(){
         driver.get(url);
+        log.debug("Navigate url" +url);
     }
 
     @When("User enter username as {string} and password as {string} and click on login button")
     public void User_enter_username_as_and_password_as_and_click_on_login_button(String userName,String password){
         driver.findElement(By.name("username")).sendKeys(userName);
+        log.debug("login username" +userName);
         driver.findElement(By.name("password")).sendKeys(password);
+        log.debug("login password" +password);
         driver.findElement(By.xpath("//input[@value='Log In']")).click();
-    }
+        log.debug("Click on login");
+     }
 
     //User credentials implementation using key and value pair
     @When("User Enter Username and Password as in the below table and click on login button")
@@ -106,6 +118,7 @@ public class Stepdefs {
     @Given("User is able to click on link name as {string}")
     public void user_is_able_to_click_on_link_name_as(String linkName) {
         driver.findElement(By.linkText(linkName)).click();
+        log.debug("click on link and link name is :" +linkName);
     }
 
     @When("User select Account Type as {string} and any account number")
