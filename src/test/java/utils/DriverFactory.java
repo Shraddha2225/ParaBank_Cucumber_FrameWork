@@ -13,11 +13,13 @@ public class DriverFactory {
         WebDriver driver = null;
         switch (browserName.trim().toLowerCase()){
             case "chrome":
-                return new ChromeDriver();
+                driver = new ChromeDriver();
+                break;
 
 
             case "firefox":
-                return new FirefoxDriver();
+                driver = new FirefoxDriver();
+                break;
 
             default:
                 Assert.fail("No Such Method Defined");

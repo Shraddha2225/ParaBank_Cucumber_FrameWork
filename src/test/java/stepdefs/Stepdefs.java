@@ -31,7 +31,6 @@ public class Stepdefs {
 
     @Before
     public void setUp(Scenario scenario){
-
         this.scenario = scenario;
         scenario.log("executed before each scenario");
     }
@@ -307,19 +306,5 @@ public class Stepdefs {
         System.out.println("Product search success :" +success);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

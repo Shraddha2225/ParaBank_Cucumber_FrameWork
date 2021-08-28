@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Extent Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 28, 2021 11:16:57 AM</span></a>
+<a href="#"><span class="badge badge-primary">Aug 28, 2021 01:13:40 PM</span></a>
 </li>
 </ul>
 </div>
@@ -57,6 +57,11 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -66,25 +71,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 28, 2021 11:16:57 AM</h3>
+<h3>Aug 28, 2021 01:13:40 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 28, 2021 11:18:37 AM</h3>
+<h3>Aug 28, 2021 01:13:46 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>6</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>4</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +105,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>6</b> features passed
+<div><small data-tooltip='33%'>
+<b>2</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='66%'><b>4</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +128,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>14</b> scenarios passed</small></div>
+<div><small data-tooltip='71%'><b>10</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='28%'><b>4</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>191</b> steps passed</small></div>
+<div><small data-tooltip='82%'><b>121</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='2%'><b>4</b> steps failed,
+<b>22</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -162,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Find Transactions":0.015,"Temporary Dummy example of datatable":4.983,"Bill Pay Feature":93.661,"Login Feature":86.249,"Transfer Funds Feature":88.552,"Open New Account Feature":88.252
+"Find Transactions":0.023,"Temporary Dummy example of datatable":2.58,"Bill Pay Feature":2.492,"Login Feature":2.23,"Transfer Funds Feature":0.045,"Open New Account Feature":0.029
 };
 </script>
 <div class="row">
@@ -172,40 +177,16 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@transfer_funds</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
 <td>@t1</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@open_new_account</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>0%</td>
 </tr>
 <tr>
 <td>@Example</td>
 <td>8</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@bill_payment</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -218,6 +199,30 @@ var timeline = {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
+</tr>
+<tr>
+<td>@bill_payment</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@transfer_funds</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@open_new_account</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -246,21 +251,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 6,
-failParent: 0,
+passParent: 2,
+failParent: 4,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 14,
-failChild: 0,
+passChild: 10,
+failChild: 4,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 191,
-failGrandChild: 0,
+passGrandChild: 121,
+failGrandChild: 4,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 22,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -275,6 +280,7 @@ eventsCount: 5,
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -282,7 +288,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@transfer_funds</a><a class="dropdown-item" href="#">@t1</a><a class="dropdown-item" href="#">@open_new_account</a><a class="dropdown-item" href="#">@Example</a><a class="dropdown-item" href="#">@bill_payment</a><a class="dropdown-item" href="#">@datatable</a>
+<a class="dropdown-item" href="#">@t1</a><a class="dropdown-item" href="#">@Example</a><a class="dropdown-item" href="#">@datatable</a><a class="dropdown-item" href="#">@bill_payment</a><a class="dropdown-item" href="#">@transfer_funds</a><a class="dropdown-item" href="#">@open_new_account</a>
 </ul>
 </li>
 </ul>
@@ -295,7 +301,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Find Transactions</p>
             <p class="text-sm">
-              <span>11:17:01 AM</span> / <span>00:00:00:015</span>
+              <span>13:13:43 PM</span> / <span>00:00:00:023</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -304,9 +310,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Find Transactions</h5>
-<span class='badge badge-success'>08.28.2021 11:17:01</span>
-<span class='badge badge-danger'>08.28.2021 11:17:01</span>
-<span class='badge badge-default'>00:00:00:015</span>
+<span class='badge badge-success'>08.28.2021 13:13:43</span>
+<span class='badge badge-danger'>08.28.2021 13:13:43</span>
+<span class='badge badge-default'>00:00:00:023</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -316,7 +322,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User is able to find transactions in different ways</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User is able to find transaction by account number and transaction id</div>
       </div>
     </div>
   </div>
@@ -330,7 +336,7 @@ eventsCount: 5,
           <div class="test-detail">
             <p class="name">Temporary Dummy example of datatable</p>
             <p class="text-sm">
-              <span>11:17:01 AM</span> / <span>00:00:04:983</span>
+              <span>13:13:43 PM</span> / <span>00:00:02:580</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -339,9 +345,9 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Temporary Dummy example of datatable</h5>
-<span class='badge badge-success'>08.28.2021 11:17:01</span>
-<span class='badge badge-danger'>08.28.2021 11:17:06</span>
-<span class='badge badge-default'>00:00:04:983</span>
+<span class='badge badge-success'>08.28.2021 13:13:43</span>
+<span class='badge badge-danger'>08.28.2021 13:13:46</span>
+<span class='badge badge-default'>00:00:02:580</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
@@ -351,656 +357,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-      </div>
-    </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "Earrings"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "Earrings"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "Anklet"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "Anklet"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "Bluetooth"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "Bluetooth"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "Shoes"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "Shoes"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "Bracelet"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "Bracelet"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "I-pad"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "I-pad"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "computer"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "computer"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="106"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
-      <div>executed before each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Given I am on a search page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When I want to search for a product as "Laptop"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then Result should be displayed related to "Laptop"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>stepdefs.Stepdefs.cleanUp()</span>
-      <div>executed after each scenario
-      </div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Implementation of datatable</div>
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Implementation of datatable</div>
       </div>
     </div>
         <div class="collapse">
@@ -1121,29 +478,678 @@ eventsCount: 5,
           </div>
         </div>
   </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "I-pad"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "I-pad"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "Anklet"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "Anklet"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "Bracelet"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "Bracelet"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "Bluetooth"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "Bluetooth"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "Shoes"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "Shoes"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "Earrings"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "Earrings"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "computer"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "computer"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="200"><span class="badge log pass-bg mr-2">Pass</span>I want to search for product</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
+      <div>executed before each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given I am on a search page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I want to search for a product as "Laptop"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.beforeEachStep()</span>
+      <div>executed before each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Result should be displayed related to "Laptop"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.afterEachStep()</span>
+      <div>executed after each line of test case
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>stepdefs.Stepdefs.cleanUp()</span>
+      <div>executed after each scenario
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="14"
+        <li class="test-item"  status="fail" test-id="11"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Bill Pay Feature</p>
             <p class="text-sm">
-              <span>11:17:01 AM</span> / <span>00:01:33:661</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>13:13:43 PM</span> / <span>00:00:02:492</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Bill Pay Feature</h5>
-<span class='badge badge-success'>08.28.2021 11:17:01</span>
-<span class='badge badge-danger'>08.28.2021 11:18:34</span>
-<span class='badge badge-default'>00:01:33:661</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<h5 class="test-status text-fail">Bill Pay Feature</h5>
+<span class='badge badge-success'>08.28.2021 13:13:43</span>
+<span class='badge badge-danger'>08.28.2021 13:13:46</span>
+<span class='badge badge-default'>00:00:02:492</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
 </div>
@@ -1152,10 +1158,10 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>User is able to pay a bill</div>
+        <div class="node" id="12"><span class="badge log fail-bg mr-2">Fail</span>User is able to pay a bill</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="BEFORE">
                 <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
@@ -1171,9 +1177,16 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_logged_in()">
+              <div class="step fail-bg" title="stepdefs.Stepdefs.user_is_logged_in()">
                 <span>Given User is logged in</span>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at utils.DriverFactory.createInstance(DriverFactory.java:14)
+	at stepdefs.Stepdefs.User_opened_the_browser(Stepdefs.java:70)
+	at stepdefs.Stepdefs.user_is_logged_in(Stepdefs.java:116)
+	at ✽.User is logged in(classpath:features/BillPay.feature:5)
+</textarea>
+      
       </div>
               </div>
               <div class="step pass-bg" title="AFTER_STEP">
@@ -1183,175 +1196,49 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_able_to_click_on_link_name_as(java.lang.String)">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_is_able_to_click_on_link_name_as(java.lang.String)">
                 <span>And User is able to click on link name as "Bill Pay"</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_payee_name_and_address()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_payee_name_and_address()">
                 <span>When User enter payee name and address</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_city_and_state()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_city_and_state()">
                 <span>And User enter city and state</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_zipcode_and_phone_number()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_zipcode_and_phone_number()">
                 <span>And User enter zipcode and phone number</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_account_number_and_verify_account_number()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_account_number_and_verify_account_number()">
                 <span>And User enter account number and verify account number</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_an_amount()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_an_amount()">
                 <span>And User enter an amount</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_select_any_account_number_from_which_he_want_to_pay_a_bill()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_select_any_account_number_from_which_he_want_to_pay_a_bill()">
                 <span>And User select any account number from which he want to pay a bill</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_click_on_send_payment()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_click_on_send_payment()">
                 <span>And User click on SEND PAYMENT</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.message_is_displayed_bill_payment_was_successful()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.message_is_displayed_bill_payment_was_successful()">
                 <span>Then Message is displayed bill payment was successful</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
               <div class="step pass-bg" title="AFTER">
@@ -1367,26 +1254,26 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="21"
+        <li class="test-item"  status="fail" test-id="16"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Login Feature</p>
             <p class="text-sm">
-              <span>11:17:01 AM</span> / <span>00:01:26:249</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>13:13:43 PM</span> / <span>00:00:02:230</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Login Feature</h5>
-<span class='badge badge-success'>08.28.2021 11:17:01</span>
-<span class='badge badge-danger'>08.28.2021 11:18:27</span>
-<span class='badge badge-default'>00:01:26:249</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<h5 class="test-status text-fail">Login Feature</h5>
+<span class='badge badge-success'>08.28.2021 13:13:43</span>
+<span class='badge badge-danger'>08.28.2021 13:13:45</span>
+<span class='badge badge-default'>00:00:02:230</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
 </div>
@@ -1395,10 +1282,10 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>User is able to Login in the application</div>
+        <div class="node" id="17"><span class="badge log fail-bg mr-2">Fail</span>User is able to Login in the application</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="BEFORE">
                 <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
@@ -1414,9 +1301,15 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.User_opened_the_browser()">
+              <div class="step fail-bg" title="stepdefs.Stepdefs.User_opened_the_browser()">
                 <span>Given User opened the browser</span>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at utils.DriverFactory.createInstance(DriverFactory.java:14)
+	at stepdefs.Stepdefs.User_opened_the_browser(Stepdefs.java:70)
+	at ✽.User opened the browser(classpath:features/Login.feature:5)
+</textarea>
+      
       </div>
               </div>
               <div class="step pass-bg" title="AFTER_STEP">
@@ -1426,63 +1319,21 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.User_navigated_to_the_application_url()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.User_navigated_to_the_application_url()">
                 <span>And User navigated to the application url</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_username_and_password_as_in_the_below_table_and_click_on_login_button(java.util.Map<java.lang.String, java.lang.String>)">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_username_and_password_as_in_the_below_table_and_click_on_login_button(java.util.Map<java.lang.String, java.lang.String>)">
                 <span>When User Enter Username and Password as in the below table and click on login button</span>
       <div><table class='markup-table table '><tr><td>Username</td><td>john</td></tr><tr><td>Password</td><td>demo</td></tr></table>
       </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_able_to_login_in_the_application()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_is_able_to_login_in_the_application()">
                 <span>Then user is able to login in the application</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
               <div class="step pass-bg" title="AFTER">
@@ -1498,26 +1349,26 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="100"
+        <li class="test-item"  status="fail" test-id="116"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Transfer Funds Feature</p>
             <p class="text-sm">
-              <span>11:17:06 AM</span> / <span>00:01:28:552</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>13:13:45 PM</span> / <span>00:00:00:045</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Transfer Funds Feature</h5>
-<span class='badge badge-success'>08.28.2021 11:17:06</span>
-<span class='badge badge-danger'>08.28.2021 11:18:34</span>
-<span class='badge badge-default'>00:01:28:552</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=100</span>
+<h5 class="test-status text-fail">Transfer Funds Feature</h5>
+<span class='badge badge-success'>08.28.2021 13:13:45</span>
+<span class='badge badge-danger'>08.28.2021 13:13:46</span>
+<span class='badge badge-default'>00:00:00:045</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=116</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
 </div>
@@ -1526,10 +1377,10 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="101"><span class="badge log pass-bg mr-2">Pass</span>User is able to transfer funds</div>
+        <div class="node" id="117"><span class="badge log fail-bg mr-2">Fail</span>User is able to transfer funds</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="BEFORE">
                 <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
@@ -1545,9 +1396,16 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_logged_in()">
+              <div class="step fail-bg" title="stepdefs.Stepdefs.user_is_logged_in()">
                 <span>Given User is logged in</span>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at utils.DriverFactory.createInstance(DriverFactory.java:14)
+	at stepdefs.Stepdefs.User_opened_the_browser(Stepdefs.java:70)
+	at stepdefs.Stepdefs.user_is_logged_in(Stepdefs.java:116)
+	at ✽.User is logged in(classpath:features/TransferFunds.feature:5)
+</textarea>
+      
       </div>
               </div>
               <div class="step pass-bg" title="AFTER_STEP">
@@ -1557,99 +1415,29 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_able_to_click_on_link_name_as(java.lang.String)">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_is_able_to_click_on_link_name_as(java.lang.String)">
                 <span>And User is able to click on link name as "Transfer Funds"</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_enter_amount_to_transfer(java.lang.String)">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_enter_amount_to_transfer(java.lang.String)">
                 <span>When User enter amount "3600" to transfer</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_select_any_account_number_and_want_to_transfer_funds_to_any_another_account()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_select_any_account_number_and_want_to_transfer_funds_to_any_another_account()">
                 <span>And User select any account number and want to transfer funds to any another account</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_click_on_transfer()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_click_on_transfer()">
                 <span>And User click on TRANSFER</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.message_is_displayed_amount_is_transfer_from_one_account_number_to_another_account_number()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.message_is_displayed_amount_is_transfer_from_one_account_number_to_another_account_number()">
                 <span>Then Message is displayed amount is transfer from one account number to another account number</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
               <div class="step pass-bg" title="AFTER">
@@ -1665,26 +1453,26 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="126"
+        <li class="test-item"  status="fail" test-id="157"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Open New Account Feature</p>
             <p class="text-sm">
-              <span>11:17:06 AM</span> / <span>00:01:28:252</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>13:13:46 PM</span> / <span>00:00:00:029</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Open New Account Feature</h5>
-<span class='badge badge-success'>08.28.2021 11:17:06</span>
-<span class='badge badge-danger'>08.28.2021 11:18:34</span>
-<span class='badge badge-default'>00:01:28:252</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=126</span>
+<h5 class="test-status text-fail">Open New Account Feature</h5>
+<span class='badge badge-success'>08.28.2021 13:13:46</span>
+<span class='badge badge-danger'>08.28.2021 13:13:46</span>
+<span class='badge badge-default'>00:00:00:029</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=157</span>
 </div>
 <div class="m-t-10 m-l-5"></div>
 </div>
@@ -1693,10 +1481,10 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="127"><span class="badge log pass-bg mr-2">Pass</span>User is able to open new account</div>
+        <div class="node" id="158"><span class="badge log fail-bg mr-2">Fail</span>User is able to open new account</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="BEFORE">
                 <span>stepdefs.Stepdefs.setUp(io.cucumber.java.Scenario)</span>
@@ -1712,9 +1500,16 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_logged_in()">
+              <div class="step fail-bg" title="stepdefs.Stepdefs.user_is_logged_in()">
                 <span>Given User is logged in</span>
       <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException
+	at utils.DriverFactory.createInstance(DriverFactory.java:14)
+	at stepdefs.Stepdefs.User_opened_the_browser(Stepdefs.java:70)
+	at stepdefs.Stepdefs.user_is_logged_in(Stepdefs.java:116)
+	at ✽.User is logged in(classpath:features/OpenNewAccount.feature:5)
+</textarea>
+      
       </div>
               </div>
               <div class="step pass-bg" title="AFTER_STEP">
@@ -1724,101 +1519,29 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_is_able_to_click_on_link_name_as(java.lang.String)">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_is_able_to_click_on_link_name_as(java.lang.String)">
                 <span>And User is able to click on link name as "Open New Account"</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_select_account_type_as_and_any_account_number(java.lang.String)">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_select_account_type_as_and_any_account_number(java.lang.String)">
                 <span>When User select Account Type as "SAVINGS" and any account number</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.user_click_on_open_new_account_button()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.user_click_on_open_new_account_button()">
                 <span>And User click on OPEN NEW ACCOUNT button</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.message_is_displayed_congratulations_your_account_is_now_open()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.message_is_displayed_congratulations_your_account_is_now_open()">
                 <span>Then Message is displayed Congratulations, your account is now open.</span>
-      <div>
+      <div>Step skipped
       </div>
               </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="BEFORE_STEP">
-                <span>stepdefs.Stepdefs.beforeEachStep()</span>
-      <div>executed before each line of test case
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepdefs.Stepdefs.a_new_account_number_is_generated()">
+              <div class="step skip-bg" title="stepdefs.Stepdefs.a_new_account_number_is_generated()">
                 <span>And A new account number is generated</span>
-      <div>New Account Number Generated As:13677
-      </div>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER_STEP">
-                <span>stepdefs.Stepdefs.afterEachStep()</span>
-      <div>executed after each line of test case
-      </div>
-      <div>
+      <div>Step skipped
       </div>
               </div>
               <div class="step pass-bg" title="AFTER">
@@ -1854,43 +1577,7 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@transfer_funds</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@transfer_funds</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:06 AM</td>
-<td>
-<a href="#" class="linked" test-id='100' id='101'>User is able to transfer funds</a>
-<div class="">
-<span class="badge badge-default">Transfer Funds Feature.User is able to transfer funds</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">@t1</p>
 <p class="duration text-sm">1 tests</p>
@@ -1898,7 +1585,7 @@ eventsCount: 5,
 <div class="test-contents d-none">
 <div class="info">
 <h4>@t1</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1909,49 +1596,13 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:43 PM</td>
 <td>
-<a href="#" class="linked" test-id='21' id='22'>User is able to Login in the application</a>
+<a href="#" class="linked" test-id='16' id='17'>User is able to Login in the application</a>
 <div class="">
 <span class="badge badge-default">Login Feature.User is able to Login in the application</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@open_new_account</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@open_new_account</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:06 AM</td>
-<td>
-<a href="#" class="linked" test-id='126' id='127'>User is able to open new account</a>
-<div class="">
-<span class="badge badge-default">Open New Account Feature.User is able to open new account</span>
 </div>
 </td>
 </tr>
@@ -1983,17 +1634,7 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='5'>I want to search for product</a>
-<div class="">
-<span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<td>13:13:43 PM</td>
 <td>
 <a href="#" class="linked" test-id='3' id='6'>I want to search for product</a>
 <div class="">
@@ -2003,17 +1644,7 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='7'>I want to search for product</a>
-<div class="">
-<span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<td>13:13:43 PM</td>
 <td>
 <a href="#" class="linked" test-id='3' id='9'>I want to search for product</a>
 <div class="">
@@ -2023,9 +1654,9 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<td>13:13:43 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='11'>I want to search for product</a>
+<a href="#" class="linked" test-id='3' id='14'>I want to search for product</a>
 <div class="">
 <span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
 </div>
@@ -2033,9 +1664,9 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<td>13:13:43 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='16'>I want to search for product</a>
+<a href="#" class="linked" test-id='3' id='19'>I want to search for product</a>
 <div class="">
 <span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
 </div>
@@ -2043,7 +1674,27 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<td>13:13:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='21'>I want to search for product</a>
+<div class="">
+<span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:13:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='23'>I want to search for product</a>
+<div class="">
+<span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:13:43 PM</td>
 <td>
 <a href="#" class="linked" test-id='3' id='25'>I want to search for product</a>
 <div class="">
@@ -2053,47 +1704,11 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:06 AM</td>
+<td>13:13:46 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='106'>I want to search for product</a>
+<a href="#" class="linked" test-id='3' id='200'>I want to search for product</a>
 <div class="">
 <span class="badge badge-default">Temporary Dummy example of datatable.I want to search for product</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@bill_payment</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@bill_payment</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
-<td>
-<a href="#" class="linked" test-id='14' id='15'>User is able to pay a bill</a>
-<div class="">
-<span class="badge badge-default">Bill Pay Feature.User is able to pay a bill</span>
 </div>
 </td>
 </tr>
@@ -2125,11 +1740,201 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>11:17:01 AM</td>
+<td>13:13:43 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='8'>Implementation of datatable</a>
+<a href="#" class="linked" test-id='3' id='4'>Implementation of datatable</a>
 <div class="">
 <span class="badge badge-default">Temporary Dummy example of datatable.Implementation of datatable</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@bill_payment</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@bill_payment</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='12'>User is able to pay a bill</a>
+<div class="">
+<span class="badge badge-default">Bill Pay Feature.User is able to pay a bill</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@transfer_funds</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@transfer_funds</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='116' id='117'>User is able to transfer funds</a>
+<div class="">
+<span class="badge badge-default">Transfer Funds Feature.User is able to transfer funds</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@open_new_account</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@open_new_account</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='157' id='158'>User is able to open new account</a>
+<div class="">
+<span class="badge badge-default">Open New Account Feature.User is able to open new account</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='42'>Given User opened the browser</a>
+<div class="">
+<span class="badge badge-default">Login Feature.User is able to Login in the application.Given User opened the browser</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='45'>Given User is logged in</a>
+<div class="">
+<span class="badge badge-default">Bill Pay Feature.User is able to pay a bill.Given User is logged in</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='116' id='120'>Given User is logged in</a>
+<div class="">
+<span class="badge badge-default">Transfer Funds Feature.User is able to transfer funds.Given User is logged in</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:13:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='157' id='161'>Given User is logged in</a>
+<div class="">
+<span class="badge badge-default">Open New Account Feature.User is able to open new account.Given User is logged in</span>
 </div>
 </td>
 </tr>
