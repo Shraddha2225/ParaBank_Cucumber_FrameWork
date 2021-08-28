@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.log4testng.Logger;
+import utils.DriverFactory;
 
 import java.sql.SQLOutput;
 import java.util.List;
@@ -65,6 +66,8 @@ public class Stepdefs {
     ////TC1: Login Feature
     @Given("User opened the browser")
     public void User_opened_the_browser(){
+        String browserName = System.getProperty("browser");//get value from command line
+        driver = DriverFactory.createInstance(browserName);
         driver = new ChromeDriver();
         log.debug("chrome initialized");
         driver.manage().window().maximize(); // maximize browser window
